@@ -38,8 +38,6 @@ const Dashboard: React.FC = () => {
     (async function loadTransactions(): Promise<void> {
       const response = await api.get('transactions');
 
-      console.log('data', response.data);
-
       setTransactions(response.data.transactions);
       setBalance(response.data.balance);
     })();
